@@ -22,7 +22,7 @@ else if(ch == ' ** )
 res=a*b;}
 else if(ch='/')
 {
-res-a/b;
+res=a/b;
 }
 else
 { 
