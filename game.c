@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int secretNumber = randi(1,10); 
+    int secretNumber = 7; 
     int guess;
 
     printf("Welcome to the Number Guessing Game!\n");
