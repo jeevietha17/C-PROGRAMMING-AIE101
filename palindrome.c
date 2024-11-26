@@ -1,24 +1,32 @@
-#include <stdio.h>
-int main()
-{
- int num, Num, rev = 0, d;
- 
- printf("Enter an integer: ");
- scanf("%d", &num);
- Num = num; 
- 
- while (num != 0)
-{
- d = num % 10; 
- rev = rev * 10 + d; 
- num /= 10; 
- }
+//palindrome
 
- if (Num == rev)
-{
- printf("%d is a palindrome.\n", Num);
- } else {
- printf("%d is not a palindrome.\n", Num);
- }
- return 0;
+#include <stdio.h>
+
+int isPalindrome(int arr[], int n) {
+    for (int i = 0; i < n / 2; i++) {
+        if (arr[i] != arr[n - i - 1]) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int main() {
+    int n, arr[100];
+
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter the elements: ");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    if (isPalindrome(arr, n)) {
+        printf("The array is a palindrome.\n");
+    } else {
+        printf("The array is not a palindrome.\n");
+    }
+
+    return 0;
 }
